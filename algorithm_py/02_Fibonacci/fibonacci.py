@@ -1,5 +1,6 @@
 import sys
 
+# Calculate Fibonacci sequence
 def fib(n):
     if n > 1 :
         # F(n+2) = F(n+1) + F(n)
@@ -10,10 +11,9 @@ def fib(n):
         # F(0)=0, F(1)=1
         return n
 
-arg = sys.argv[1]
-
-#Argument check
-if len(arg) > 0 :
+# main
+if len(sys.argv) > 1 :
+    arg = sys.argv[1]
     if arg.isdigit() and int(arg) >= 0:
         print(fib(int(arg)))
     else:
