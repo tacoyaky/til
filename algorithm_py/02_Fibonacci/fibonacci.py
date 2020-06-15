@@ -12,11 +12,12 @@ def fib(n):
         return n
 
 # main
-if len(sys.argv) > 1 :
-    arg = sys.argv[1]
-    if arg.isdigit() and int(arg) >= 0:
-        print(fib(int(arg)))
+if __name__ == "__main__":
+    if len(sys.argv) > 1 :
+        arg = sys.argv[1]
+        if arg.isdigit() and int(arg) >= 0:
+            print(fib(int(arg)))
+        else:
+            print('err : Argument is invalid.')    
     else:
-        print('err : Argument is invalid.')    
-else:
-    print('err : No argument.')
+        print('err : No argument.')
