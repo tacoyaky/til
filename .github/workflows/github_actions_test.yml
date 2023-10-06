@@ -25,5 +25,5 @@ jobs:
             test_cmd: "ls -a"
         run: |
           cd ./algorithm_py
-          TODAY = `date +%Y%m%d`
+          TODAY=`date +%Y%m%d`
           echo ${TODAY}
