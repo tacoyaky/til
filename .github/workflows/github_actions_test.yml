@@ -22,6 +22,7 @@ jobs:
       - name: test step
         env:
             test_val: "this is test."
+            test_cmd: "ls -a"
         run: |
-          echo "global_env = ${{env.DAY_OF_WORK}}"
-          echo "local_env = ${{env.test_val}}"
+          TODAY = "`date +%Y%m%d`"
+          echo ${TODAY}
