@@ -19,6 +19,6 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: |
-          test_val = "this is test."
+      - name: test step
+        run: |
           echo "env = ${{env.DAY_OF_WORK}}"
