@@ -27,7 +27,7 @@ jobs:
         run: |
           touch temp.txt
           echo "this is dummy code" > temp.txt
-          sed -i -e "s/dummy/${{secrets.TEST}}/" temp.txt
+          sed -i -e "s/dummy/$TEST_CODE/" temp.txt
           cat temp.txt
           TODAY=`date +%Y%m%d`
           echo "${TODAY}"
