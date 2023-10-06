@@ -9,7 +9,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${github.event_name} event."
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
@@ -27,7 +27,5 @@ jobs:
         run: |
           touch temp.txt
           echo "this is dummy code" > temp.txt
-          sed -i -e "s/dummy/$TEST_CODE/" temp.txt
+          sed -i -e "s/dummy/${TEST_CODE}/" temp.txt
           cat temp.txt
-          TODAY=`date +%Y%m%d`
-          echo "${TODAY}"
