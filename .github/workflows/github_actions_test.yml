@@ -26,4 +26,4 @@ jobs:
         run: |
           cd ./algorithm_py
           TODAY=`date +%Y%m%d`
-          echo ${TODAY}
+          echo "${TODAY}"
