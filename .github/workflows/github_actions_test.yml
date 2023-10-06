@@ -26,7 +26,8 @@ jobs:
             test_cmd: "ls -a"
         run: |
           touch temp.txt
-          echo "${{env.TEST_CODE}}" > temp.txt
+          echo "this is dummy code" > temp.txt
+          sed -i -e "s/dummy/${{env.TEST_CODE}}/" temp.txt
           cat temp.txt
           TODAY=`date +%Y%m%d`
           echo "${TODAY}"
