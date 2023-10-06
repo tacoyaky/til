@@ -25,6 +25,8 @@ jobs:
             test_val: "this is test."
             test_cmd: "ls -a"
         run: |
-          echo "${{env.TEST_CODE}}"
+          touch temp.txt
+          echo "${{env.TEST_CODE}}" > temp.txt
+          cat temp.txt
           TODAY=`date +%Y%m%d`
           echo "${TODAY}"
