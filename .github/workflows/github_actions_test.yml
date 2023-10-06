@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on: [push]
 env:
   DAY_OF_WORK: "Monday"
+  TEST_CODE: ${{secrets.TEST}}
 
 jobs:
   Explore-GitHub-Actions:
@@ -24,6 +25,6 @@ jobs:
             test_val: "this is test."
             test_cmd: "ls -a"
         run: |
-          cat README.md
+          echo "${{env.TEST_CODE}}"
           TODAY=`date +%Y%m%d`
           echo "${TODAY}"
